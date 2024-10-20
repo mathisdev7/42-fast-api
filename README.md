@@ -17,6 +17,20 @@ To install the package, run:
 npm install 42-fast-api
 ```
 
+or
+
+```bash
+yarn add 42-fast-api
+```
+
+or
+
+```bash
+pnpm add 42-fast-api
+```
+
+pnpm is recommended for faster installation and better dependency management.
+
 ## Usage
 
 Start by creating a `.env` file with your `UID` and `SECRET` from the 42 API:
