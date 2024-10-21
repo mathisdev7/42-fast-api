@@ -77,6 +77,18 @@ export interface CampusUser {
   updated_at: string;
 }
 
+export type Achievement = {
+  id: number;
+  name: string;
+  description: string;
+  tier: "easy" | "medium" | "none";
+  kind: "scolarity" | "social" | "project";
+  visible: boolean;
+  image: string;
+  nbr_of_success: number | null;
+  users_url: string;
+};
+
 export interface UserData {
   id: number;
   email: string;
@@ -107,7 +119,7 @@ export interface UserData {
   cursus_users: CursusUser[];
   projects_users: ProjectUser[];
   languages_users: LanguageUser[];
-  achievements: any[];
+  achievements: Achievement[];
   titles: any[];
   titles_users: any[];
   partnerships: any[];
