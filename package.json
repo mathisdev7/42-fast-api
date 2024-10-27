@@ -1,0 +1,12 @@
+{
+  "name": "42-fast-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "pnpx tsx index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

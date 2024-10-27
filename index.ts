@@ -12,14 +12,14 @@ const api = new FortyTwoAPI({
   baseUrl: "https://api.intra.42.fr/v2",
 });
 
-(async () => { 
+(async () => {
   try {
     await api.init();
-    const userId = await api.getUserIdByLogin("mazeghou");
-    console.log(userId);
+    const campusUsers = await api.coalition.getCoalitionUsers("377");
+    console.log(campusUsers);
 
-    const userData = await api.getUserData(userId);
-    console.log(userData.partnerships.splice(0, 5));
+    // const userData = await api.getUserData(userId);
+    // console.log(userData.partnerships.splice(0, 5));
   } catch (error) {
     console.error(error);
   }

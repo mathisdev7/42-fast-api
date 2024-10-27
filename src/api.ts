@@ -1,8 +1,13 @@
-import { UserData } from "../types/UserData";
 import { FortyTwoClient } from "./client";
+import { CoalitionService } from "./services";
+import { CampusService } from "./services/campusService";
+import { UserService } from "./services/userService";
 
 export class FortyTwoAPI {
   private client: FortyTwoClient;
+  public users: UserService;
+  public campus: CampusService;
+  public coalition: CoalitionService;
 
   constructor({
     uid,
@@ -21,28 +26,12 @@ export class FortyTwoAPI {
       logRequests,
       baseUrl,
     });
+    this.users = new UserService(this.client);
+    this.campus = new CampusService(this.client);
+    this.coalition = new CoalitionService(this.client);
   }
 
   public async init() {
     await this.client.init();
-  }
-
-  public async getUserIdByLogin(login: string): Promise<string> {
-    const data = await this.client.get(`/users?filter[login]=${login}`);
-    const users = data as UserData[];
-    if (users.length === 0) {
-      throw new Error("User not found");
-    }
-    return String(users[0].id);
-  }
-
-  public async getUserData(userId: string): Promise<UserData> {
-    const data = await this.client.get(`/users/${userId}`);
-    return data as UserData;
-  }
-
-  public async getCampusList() {
-    const data = await this.client.get(`/campus`);
-    return data;
   }
 }
