@@ -1,6 +1,9 @@
 # FortyTwo API Client
 
-A simplified client for interacting with the 42 API. This project aims to provide an easy-to-use interface to manage OAuth2 tokens and make authenticated API requests. Development started on **October 20, 2024**, and it is currently in progress.
+> [!NOTE]
+> Development started on **October 20, 2024**, and it is currently in progress.
+
+A simplified client for interacting with the 42 API. This project aims to provide an easy-to-use interface to manage OAuth2 tokens and make authenticated API requests.
 
 ## Features
 
