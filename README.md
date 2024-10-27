@@ -62,10 +62,10 @@ const api = new FortyTwoAPI({
 (async () => {
   try {
     await api.init();
-    const userId = await api.getUserIdByLogin("example_login");
+    const userId = await api.users.getUserIdByLogin("example_login");
     console.log(userId);
 
-    const userData = await api.getUserData(userId);
+    const userData = await api.users.getUserData(userId);
     console.table(userData.projects_users);
   } catch (error) {
     console.error(error);

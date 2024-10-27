@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { FortyTwoAPI } from "./src/api";
+import { FortyTwoAPI } from "../src/api";
 dotenv.config();
 
 if (!process.env.UID || !process.env.SECRET) {

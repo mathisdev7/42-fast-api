@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "pnpx tsx index.ts"
+    "test": "pnpx tsx test/index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "42",
+    "42 api",
+    "42 fast api",
+    "42 api client",
+    "42 fast client"
+  ],
+  "author": "mathisdev7",
   "license": "ISC"
 }
