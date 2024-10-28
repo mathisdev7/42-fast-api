@@ -9,7 +9,7 @@ export class CampusService {
   }
 
   /**
-   *
+   * Get campus by ID
    * @param id Campus ID
    * @returns CampusData
    * @throws Error if campus not found
@@ -21,7 +21,7 @@ export class CampusService {
   }
 
   /**
-   *
+   * Get campus users
    * @param id Campus ID
    * @param page Page number (default 1)
    * @returns Array of CampusUserData
@@ -39,7 +39,7 @@ export class CampusService {
   }
 
   /**
-   *
+   * Get campus by name
    * @param name Campus name
    * @returns Campus
    * @throws Error if campus not found
@@ -56,6 +56,7 @@ export class CampusService {
   }
 
   /**
+   * Get all campuses
    * @param page Page number (default 1)
    * @returns Array of CampusData
    * @throws Error if no campuses found

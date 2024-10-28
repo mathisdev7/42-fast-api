@@ -1,5 +1,9 @@
 import { FortyTwoClient } from "./client";
-import { CoalitionService } from "./services";
+import {
+  CoalitionService,
+  CurriculumService,
+  ProjectsService,
+} from "./services";
 import { CampusService } from "./services/campusService";
 import { UserService } from "./services/userService";
 
@@ -8,6 +12,8 @@ export class FortyTwoAPI {
   public users: UserService;
   public campus: CampusService;
   public coalition: CoalitionService;
+  public curriculum: CurriculumService;
+  public projects: ProjectsService;
 
   constructor({
     uid,
@@ -29,6 +35,8 @@ export class FortyTwoAPI {
     this.users = new UserService(this.client);
     this.campus = new CampusService(this.client);
     this.coalition = new CoalitionService(this.client);
+    this.curriculum = new CurriculumService(this.client);
+    this.projects = new ProjectsService(this.client);
   }
 
   public async init() {

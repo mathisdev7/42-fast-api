@@ -9,7 +9,7 @@ export class CoalitionService {
   }
 
   /**
-   *
+   * Get all coalitions
    * @param id Coalition ID
    * @param page Page number (default 1)
    * @returns CampusData
@@ -23,7 +23,7 @@ export class CoalitionService {
   }
 
   /**
-   *
+   * Get all coalitions users
    * @param id Coalition ID
    * @param page Page number (default 1)
    * @returns Array of CoalitionUser

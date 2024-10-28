@@ -15,8 +15,10 @@ const api = new FortyTwoAPI({
 (async () => {
   try {
     await api.init();
-    const campusUsers = await api.coalition.getCoalitionUsers("377");
-    console.log(campusUsers);
+    const userId = await api.users.getUserIdByLogin("mazeghou");
+    const projects = await api.projects.getProjects();
+    const projectUsers = await api.projects.getProjectUsers(projects[0].id);
+    console.log(projectUsers);
 
     // const userData = await api.getUserData(userId);
     // console.log(userData.partnerships.splice(0, 5));

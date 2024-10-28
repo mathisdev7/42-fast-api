@@ -11,7 +11,7 @@ export interface UserImage {
 export interface CursusUser {
   grade: string | null;
   level: number;
-  skills: string[];
+  skills: { id: number; name: string; level: number }[];
   blackholed_at: string | null;
   id: number;
   begin_at: string;
